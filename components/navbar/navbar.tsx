@@ -263,7 +263,7 @@ export default function NavbarDemo() {
           <div className="flex items-center gap-4">
             {/* <NavbarButton variant="secondary">Login</NavbarButton> */}
             {/* Changed from 'Book a call' to 'Book a Demo' to match high-tech sales style */}
-            <NavbarButton variant="primary">Book a Demo</NavbarButton>
+            <NavbarButton href="/#contact" variant="primary">Book a Demo</NavbarButton>
           </div>
         </NavBody>
 

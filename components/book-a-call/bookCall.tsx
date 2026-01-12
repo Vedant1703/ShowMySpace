@@ -230,6 +230,190 @@
 //     </section>
 //   );
 // }
+// "use client";
+
+// import { useState } from "react";
+// import { Input } from "@/components/ui/input";
+// import { Button } from "@/components/ui/button";
+// import {
+//   Select,
+//   SelectTrigger,
+//   SelectValue,
+//   SelectContent,
+//   SelectItem,
+// } from "@/components/ui/select";
+// import { Textarea } from "@/components/ui/textarea";
+// import { COUNTRIES } from "@/lib/countries";
+// import { Mail, Phone, MapPin } from "lucide-react";
+
+// export default function BookACallPage() {
+//   const [form, setForm] = useState({
+//     name: "",
+//     email: "",
+//     countryCode: "+91", // Updated default for Mumbai-based ShowMySpace
+//     phone: "",
+//     company: "",
+//     profession: "",
+//     requirement: "",
+//   });
+
+//   const handleChange = (key: string, value: string) => {
+//     setForm((prev) => ({ ...prev, [key]: value }));
+//   };
+
+//   const handleSubmit = async () => {
+//     try {
+//       const res = await fetch("/api/contact", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify(form),
+//       });
+
+//       if (!res.ok) throw new Error("Submission failed");
+
+//       alert("✅ We'll get back to you soon!");
+//     } catch (err) {
+//       alert("❌ Something went wrong");
+//     }
+//   };
+
+//   return (
+//     <section id="contact" className="min-h-screen bg-[#06070c] text-white px-6 py-20">
+//       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+        
+//         {/* LEFT SECTION: BRANDING & CONTACT INFO */}
+//         <div className="space-y-10">
+//           <div className="space-y-4">
+//             <h3 className="text-blue-500 font-medium uppercase tracking-widest text-sm">Get In Touch</h3>
+//             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+//               Ready to Transform Your <br /> 
+//               <span className="text-blue-500">Property Marketing?</span>
+//             </h1>
+//             <p className="text-neutral-400 text-lg max-w-md">
+//               Experience the future of property visualization. Contact us to start your immersive journey today.
+//             </p>
+//           </div>
+
+//           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-white/80">
+//             <li className="flex items-center gap-2">✓ Immersive Exploration</li>
+//             <li className="flex items-center gap-2">✓ Digital Twins</li>
+//             <li className="flex items-center gap-2">✓ VR/AR Experiences</li>
+//             <li className="flex items-center gap-2">✓ Remote Sales Tools</li>
+//           </ul>
+
+//           {/* ADDED CONTACT DETAILS FROM BROCHURE */}
+//           <div className="pt-8 space-y-6 border-t border-white/10">
+//             <div className="flex items-center gap-4">
+//               <div className="h-10 w-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500">
+//                 <Mail size={20} />
+//               </div>
+//               <div>
+//                 <p className="text-xs text-neutral-500">Email us at</p>
+//                 <p className="font-medium">contact@showmyspace.in</p>
+//               </div>
+//             </div>
+//             <div className="flex items-center gap-4">
+//               <div className="h-10 w-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500">
+//                 <Phone size={20} />
+//               </div>
+//               <div>
+//                 <p className="text-xs text-neutral-500">Call us at</p>
+//                 <p className="font-medium">+91 8299808996</p>
+//               </div>
+//             </div>
+//             <div className="flex items-center gap-4">
+//               <div className="h-10 w-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500">
+//                 <MapPin size={20} />
+//               </div>
+//               <div>
+//                 <p className="text-xs text-neutral-500">Visit us</p>
+//                 <p className="font-medium">Bandra West, Mumbai, Maharashtra</p>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* RIGHT FORM */}
+//         <div className="bg-white text-black rounded-3xl shadow-2xl p-8 sm:p-10 w-full max-w-lg lg:ml-auto">
+//           <h2 className="text-2xl font-bold mb-2">Send us a message</h2>
+//           <p className="text-sm text-neutral-500 mb-8">
+//             Tell us about your project and we’ll get back to you within 24 hours.
+//           </p>
+
+//           <div className="space-y-4">
+//             <Input
+//               placeholder="Full name"
+//               className="h-12 border-neutral-200 rounded-xl"
+//               onChange={(e) => handleChange("name", e.target.value)}
+//             />
+
+//             <Input
+//               placeholder="Work email"
+//               type="email"
+//               className="h-12 border-neutral-200 rounded-xl"
+//               onChange={(e) => handleChange("email", e.target.value)}
+//             />
+
+//             <div className="flex gap-3">
+//               <Select onValueChange={(v) => handleChange("countryCode", v)} defaultValue="+91">
+//                 <SelectTrigger className="h-12 border-neutral-200 w-[110px] rounded-xl">
+//                   <SelectValue placeholder="+91" />
+//                 </SelectTrigger>
+//                 <SelectContent>
+//                   {COUNTRIES.map((c) => (
+//                     <SelectItem key={c.code} value={c.dial_code}>
+//                       {c.flag} {c.dial_code}
+//                     </SelectItem>
+//                   ))}
+//                 </SelectContent>
+//               </Select>
+
+//               <Input
+//                 placeholder="Phone number"
+//                 className="h-12 border-neutral-200 flex-1 rounded-xl"
+//                 onChange={(e) => handleChange("phone", e.target.value)}
+//               />
+//             </div>
+
+//             <Input
+//               placeholder="Company name"
+//               className="h-12 border-neutral-200 rounded-xl"
+//               onChange={(e) => handleChange("company", e.target.value)}
+//             />
+
+//             <Select onValueChange={(v) => handleChange("profession", v)}>
+//               <SelectTrigger className="h-12 border-neutral-200 rounded-xl">
+//                 <SelectValue placeholder="I am a..." />
+//               </SelectTrigger>
+//               <SelectContent>
+//                 <SelectItem value="Property Developer">Property Developer / Builder</SelectItem>
+//                 <SelectItem value="Broker">Broker / Realtor</SelectItem>
+//                 <SelectItem value="Architect">Architect / Planner</SelectItem>
+//                 <SelectItem value="Buyer">Investor / Buyer</SelectItem>
+//                 <SelectItem value="Other">Other</SelectItem>
+//               </SelectContent>
+//             </Select>
+
+//             <Textarea
+//               placeholder="Tell us about your requirements..."
+//               rows={4}
+//               className="border-neutral-200 rounded-xl resize-none"
+//               onChange={(e) => handleChange("requirement", e.target.value)}
+//             />
+
+//             <Button
+//               className="w-full h-14 text-lg font-bold rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-lg shadow-blue-900/20"
+//               onClick={handleSubmit}
+//             >
+//               Request a Demo →
+//             </Button>
+//           </div>
+//         </div>
+
+//       </div>
+//     </section>
+//   );
+// }
 "use client";
 
 import { useState } from "react";
@@ -244,13 +428,14 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { COUNTRIES } from "@/lib/countries";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Loader2 } from "lucide-react";
 
 export default function BookACallPage() {
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
-    countryCode: "+91", // Updated default for Mumbai-based ShowMySpace
+    countryCode: "+91",
     phone: "",
     company: "",
     profession: "",
@@ -262,6 +447,13 @@ export default function BookACallPage() {
   };
 
   const handleSubmit = async () => {
+    // Basic Validation
+    if (!form.name || !form.email || !form.phone) {
+      alert("Please fill in your name, email, and phone number.");
+      return;
+    }
+
+    setLoading(true);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -269,11 +461,26 @@ export default function BookACallPage() {
         body: JSON.stringify(form),
       });
 
-      if (!res.ok) throw new Error("Submission failed");
+      const result = await res.json();
 
-      alert("✅ We'll get back to you soon!");
-    } catch (err) {
-      alert("❌ Something went wrong");
+      if (!res.ok) throw new Error(result.error || "Submission failed");
+
+      alert("✅ Success! Our team will contact you within 24 hours.");
+      
+      // Reset form after successful submission
+      setForm({
+        name: "",
+        email: "",
+        countryCode: "+91",
+        phone: "",
+        company: "",
+        profession: "",
+        requirement: "",
+      });
+    } catch (err: any) {
+      alert(`❌ Error: ${err.message}`);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -290,18 +497,17 @@ export default function BookACallPage() {
               <span className="text-blue-500">Property Marketing?</span>
             </h1>
             <p className="text-neutral-400 text-lg max-w-md">
-              Experience the future of property visualization. Contact us to start your immersive journey today.
+              Experience the future of property visualization. Contact us to start your immersive journey today. [cite: 199]
             </p>
           </div>
 
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-white/80">
-            <li className="flex items-center gap-2">✓ Immersive Exploration</li>
-            <li className="flex items-center gap-2">✓ Digital Twins</li>
-            <li className="flex items-center gap-2">✓ VR/AR Experiences</li>
-            <li className="flex items-center gap-2">✓ Remote Sales Tools</li>
+            <li className="flex items-center gap-2">✓ Immersive Exploration [cite: 60]</li>
+            <li className="flex items-center gap-2">✓ Digital Twins [cite: 61]</li>
+            <li className="flex items-center gap-2">✓ VR/AR Experiences [cite: 102]</li>
+            <li className="flex items-center gap-2">✓ Remote Sales Tools [cite: 120]</li>
           </ul>
 
-          {/* ADDED CONTACT DETAILS FROM BROCHURE */}
           <div className="pt-8 space-y-6 border-t border-white/10">
             <div className="flex items-center gap-4">
               <div className="h-10 w-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500">
@@ -309,7 +515,7 @@ export default function BookACallPage() {
               </div>
               <div>
                 <p className="text-xs text-neutral-500">Email us at</p>
-                <p className="font-medium">contact@showmyspace.in</p>
+                <p className="font-medium">contact@showmyspace.in [cite: 224]</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -318,7 +524,7 @@ export default function BookACallPage() {
               </div>
               <div>
                 <p className="text-xs text-neutral-500">Call us at</p>
-                <p className="font-medium">+91 8299808996</p>
+                <p className="font-medium">+91 8299808996 [cite: 225]</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -327,7 +533,7 @@ export default function BookACallPage() {
               </div>
               <div>
                 <p className="text-xs text-neutral-500">Visit us</p>
-                <p className="font-medium">Bandra West, Mumbai, Maharashtra</p>
+                <p className="font-medium">Bandra West, Mumbai, Maharashtra [cite: 227, 228]</p>
               </div>
             </div>
           </div>
@@ -335,19 +541,21 @@ export default function BookACallPage() {
 
         {/* RIGHT FORM */}
         <div className="bg-white text-black rounded-3xl shadow-2xl p-8 sm:p-10 w-full max-w-lg lg:ml-auto">
-          <h2 className="text-2xl font-bold mb-2">Send us a message</h2>
+          <h2 className="text-2xl font-bold mb-2">Send us a message [cite: 63]</h2>
           <p className="text-sm text-neutral-500 mb-8">
-            Tell us about your project and we’ll get back to you within 24 hours.
+            Tell us about your project and we’ll get back to you within 24 hours. [cite: 64]
           </p>
 
           <div className="space-y-4">
             <Input
+              value={form.name}
               placeholder="Full name"
               className="h-12 border-neutral-200 rounded-xl"
               onChange={(e) => handleChange("name", e.target.value)}
             />
 
             <Input
+              value={form.email}
               placeholder="Work email"
               type="email"
               className="h-12 border-neutral-200 rounded-xl"
@@ -355,7 +563,10 @@ export default function BookACallPage() {
             />
 
             <div className="flex gap-3">
-              <Select onValueChange={(v) => handleChange("countryCode", v)} defaultValue="+91">
+              <Select 
+                onValueChange={(v) => handleChange("countryCode", v)} 
+                value={form.countryCode}
+              >
                 <SelectTrigger className="h-12 border-neutral-200 w-[110px] rounded-xl">
                   <SelectValue placeholder="+91" />
                 </SelectTrigger>
@@ -369,6 +580,7 @@ export default function BookACallPage() {
               </Select>
 
               <Input
+                value={form.phone}
                 placeholder="Phone number"
                 className="h-12 border-neutral-200 flex-1 rounded-xl"
                 onChange={(e) => handleChange("phone", e.target.value)}
@@ -376,25 +588,30 @@ export default function BookACallPage() {
             </div>
 
             <Input
+              value={form.company}
               placeholder="Company name"
               className="h-12 border-neutral-200 rounded-xl"
               onChange={(e) => handleChange("company", e.target.value)}
             />
 
-            <Select onValueChange={(v) => handleChange("profession", v)}>
+            <Select 
+              onValueChange={(v) => handleChange("profession", v)}
+              value={form.profession}
+            >
               <SelectTrigger className="h-12 border-neutral-200 rounded-xl">
                 <SelectValue placeholder="I am a..." />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Property Developer">Property Developer / Builder</SelectItem>
-                <SelectItem value="Broker">Broker / Realtor</SelectItem>
-                <SelectItem value="Architect">Architect / Planner</SelectItem>
-                <SelectItem value="Buyer">Investor / Buyer</SelectItem>
+                <SelectItem value="Property Developer">Property Developer / Builder [cite: 130]</SelectItem>
+                <SelectItem value="Broker">Broker / Realtor [cite: 132]</SelectItem>
+                <SelectItem value="Architect">Architect / Planner [cite: 136]</SelectItem>
+                <SelectItem value="Buyer">Investor / Buyer [cite: 134]</SelectItem>
                 <SelectItem value="Other">Other</SelectItem>
               </SelectContent>
             </Select>
 
             <Textarea
+              value={form.requirement}
               placeholder="Tell us about your requirements..."
               rows={4}
               className="border-neutral-200 rounded-xl resize-none"
@@ -402,10 +619,18 @@ export default function BookACallPage() {
             />
 
             <Button
+              disabled={loading}
               className="w-full h-14 text-lg font-bold rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-lg shadow-blue-900/20"
               onClick={handleSubmit}
             >
-              Request a Demo →
+              {loading ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Processing...
+                </>
+              ) : (
+                "Request a Demo →"
+              )}
             </Button>
           </div>
         </div>
