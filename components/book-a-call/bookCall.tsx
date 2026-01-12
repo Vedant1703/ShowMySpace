@@ -497,15 +497,15 @@ export default function BookACallPage() {
               <span className="text-blue-500">Property Marketing?</span>
             </h1>
             <p className="text-neutral-400 text-lg max-w-md">
-              Experience the future of property visualization. Contact us to start your immersive journey today. [cite: 199]
+              Experience the future of property visualization. Contact us to start your immersive journey today.
             </p>
           </div>
 
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-white/80">
-            <li className="flex items-center gap-2">✓ Immersive Exploration [cite: 60]</li>
-            <li className="flex items-center gap-2">✓ Digital Twins [cite: 61]</li>
-            <li className="flex items-center gap-2">✓ VR/AR Experiences [cite: 102]</li>
-            <li className="flex items-center gap-2">✓ Remote Sales Tools [cite: 120]</li>
+            <li className="flex items-center gap-2">✓ Immersive Exploration</li>
+            <li className="flex items-center gap-2">✓ Digital Twins</li>
+            <li className="flex items-center gap-2">✓ VR/AR Experiences</li>
+            <li className="flex items-center gap-2">✓ Remote Sales Tools</li>
           </ul>
 
           <div className="pt-8 space-y-6 border-t border-white/10">
@@ -515,7 +515,7 @@ export default function BookACallPage() {
               </div>
               <div>
                 <p className="text-xs text-neutral-500">Email us at</p>
-                <p className="font-medium">contact@showmyspace.in [cite: 224]</p>
+                <p className="font-medium">contact@showmyspace.in</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -524,7 +524,7 @@ export default function BookACallPage() {
               </div>
               <div>
                 <p className="text-xs text-neutral-500">Call us at</p>
-                <p className="font-medium">+91 8299808996 [cite: 225]</p>
+                <p className="font-medium">+91 8299808996</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -533,7 +533,7 @@ export default function BookACallPage() {
               </div>
               <div>
                 <p className="text-xs text-neutral-500">Visit us</p>
-                <p className="font-medium">Bandra West, Mumbai, Maharashtra [cite: 227, 228]</p>
+                <p className="font-medium">Bandra West, Mumbai, Maharashtra</p>
               </div>
             </div>
           </div>
@@ -541,9 +541,9 @@ export default function BookACallPage() {
 
         {/* RIGHT FORM */}
         <div className="bg-white text-black rounded-3xl shadow-2xl p-8 sm:p-10 w-full max-w-lg lg:ml-auto">
-          <h2 className="text-2xl font-bold mb-2">Send us a message [cite: 63]</h2>
+          <h2 className="text-2xl font-bold mb-2">Send us a message</h2>
           <p className="text-sm text-neutral-500 mb-8">
-            Tell us about your project and we’ll get back to you within 24 hours. [cite: 64]
+            Tell us about your project and we’ll get back to you within 24 hours.
           </p>
 
           <div className="space-y-4">
@@ -602,10 +602,10 @@ export default function BookACallPage() {
                 <SelectValue placeholder="I am a..." />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Property Developer">Property Developer / Builder [cite: 130]</SelectItem>
-                <SelectItem value="Broker">Broker / Realtor [cite: 132]</SelectItem>
-                <SelectItem value="Architect">Architect / Planner [cite: 136]</SelectItem>
-                <SelectItem value="Buyer">Investor / Buyer [cite: 134]</SelectItem>
+                <SelectItem value="Property Developer">Property Developer / Builder</SelectItem>
+                <SelectItem value="Broker">Broker / Realtor</SelectItem>
+                <SelectItem value="Architect">Architect / Planner</SelectItem>
+                <SelectItem value="Buyer">Investor / Buyer</SelectItem>
                 <SelectItem value="Other">Other</SelectItem>
               </SelectContent>
             </Select>

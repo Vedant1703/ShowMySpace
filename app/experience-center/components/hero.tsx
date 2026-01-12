@@ -56,9 +56,9 @@ export default function ExperienceCenterHero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mx-auto max-w-3xl text-lg md:text-xl text-neutral-300 leading-relaxed"
           >
-            Revolutionize property sales through the power of immersive technology[cite: 245]. 
+            Revolutionize property sales through the power of immersive technology. 
             Empower prospective clients to vividly experience spaces before construction, 
-            thereby reducing hesitation and significantly accelerating conversion rates[cite: 245].
+            thereby reducing hesitation and significantly accelerating conversion rates.
           </motion.p>
 
           <motion.div

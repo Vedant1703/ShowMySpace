@@ -75,7 +75,7 @@ export default function LaunchKPIs() {
               <div className="flex flex-wrap gap-3">
                 {["Mixed Reality Sandbox", "Holographic Projections", "Touchless Interaction", "Social Sharing"].map((tag) => (
                   <span key={tag} className="px-4 py-2 rounded-full bg-neutral-900 border border-white/10 text-xs text-neutral-400">
-                    {tag} [cite: 371]
+                    {tag} 
                   </span>
                 ))}
               </div>
@@ -86,9 +86,9 @@ export default function LaunchKPIs() {
 
         {/* Final Conclusion */}
         <div className="mt-24 text-center py-12 border-t border-white/10">
-           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Experience Centre = Sales Machine [cite: 372]</h2>
+           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Experience Centre = Sales Machine</h2>
            <p className="text-neutral-500 max-w-3xl mx-auto italic">
-            Immersive tech accelerates decisions, interactive configurators boost average order value, and real-time data helps you close smarter. [cite: 372]
+            Immersive tech accelerates decisions, interactive configurators boost average order value, and real-time data helps you close smarter.
            </p>
         </div>
       </div>

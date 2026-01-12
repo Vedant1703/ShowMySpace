@@ -58,9 +58,9 @@ export default function StrategicPurpose() {
               <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600/10 text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                 <item.icon size={28} />
               </div>
-              <h4 className="text-xl font-bold text-white mb-4">{item.title} [cite: 248, 250, 252, 255]</h4>
+              <h4 className="text-xl font-bold text-white mb-4">{item.title}</h4>
               <p className="text-neutral-400 text-sm leading-relaxed">
-                {item.description} [cite: 249, 251, 253, 256]
+                {item.description}
               </p>
             </motion.div>
           ))}

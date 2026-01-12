@@ -43,7 +43,7 @@ export default function OperationalRoles() {
           </div>
           <p className="text-neutral-500 max-w-sm text-sm leading-relaxed">
             A specialized team structure designed to maximize customer engagement 
-            and streamline the conversion process. [cite: 317]
+            and streamline the conversion process.
           </p>
         </div>
 

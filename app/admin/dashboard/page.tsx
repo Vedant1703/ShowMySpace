@@ -35,7 +35,7 @@ export default function AdminDashboard() {
     fetchLeads();
   }, []);
 
-  // Update lead status (e.g., from "New" to "Demo Scheduled") [cite: 155]
+  // Update lead status (e.g., from "New" to "Demo Scheduled") 
   const updateStatus = async (id: string, newStatus: string) => {
     try {
       await fetch(`/api/contact/${id}`, {
@@ -98,10 +98,10 @@ export default function AdminDashboard() {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="All">All Stakeholders</SelectItem>
-              <SelectItem value="Property Developer">Developers & Builders [cite: 130]</SelectItem>
-              <SelectItem value="Broker">Brokers & Realtors [cite: 132]</SelectItem>
-              <SelectItem value="Architect">Architects & Planners [cite: 136]</SelectItem>
-              <SelectItem value="Buyer">Buyers & Investors [cite: 134]</SelectItem>
+              <SelectItem value="Property Developer">Developers & Builders </SelectItem>
+              <SelectItem value="Broker">Brokers & Realtors </SelectItem>
+              <SelectItem value="Architect">Architects & Planners </SelectItem>
+              <SelectItem value="Buyer">Buyers & Investors </SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -141,7 +141,7 @@ export default function AdminDashboard() {
                       <SelectContent>
                         <SelectItem value="New">New</SelectItem>
                         <SelectItem value="Contacted">Contacted</SelectItem>
-                        <SelectItem value="Demo Scheduled">Demo Scheduled [cite: 155]</SelectItem>
+                        <SelectItem value="Demo Scheduled">Demo Scheduled</SelectItem>
                         <SelectItem value="Closed">Closed</SelectItem>
                         <SelectItem value="Lost">Lost</SelectItem>
                       </SelectContent>

@@ -46,13 +46,13 @@ import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 
 export default function AnimatedTestimonialsDemo() {
   const testimonials = [
-    {
-      quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-      name: "Sarah Chen",
-      designation: "Product Manager at Techflow",
-      src: "/assets/testimonials/sarah-chen.jpg", // From brochure 
-    },
+    // {
+    //   quote:
+    //     "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+    //   name: "Sarah Chen",
+    //   designation: "Product Manager at Techflow",
+    //   src: "/assets/testimonials/sarah-chen.jpg", // From brochure 
+    // },
     {
       quote:
         "I build immersive 3D, virtual, and XR experiences that transform architectural vision into reality—helping developers and architects sell with precision.",
