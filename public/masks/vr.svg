@@ -1,0 +1,53 @@
+<svg
+  viewBox="0 0 1200 700"
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="xMidYMid meet"
+>
+  <!-- WHITE BACKGROUND = HIDDEN -->
+  <rect width="100%" height="100%" fill="white"/>
+
+  <!-- BLACK VR WINDOW = VISIBLE -->
+  <!-- Main headset body -->
+  <rect
+    x="180"
+    y="230"
+    width="840"
+    height="280"
+    rx="140"
+    ry="140"
+    fill="black"
+  />
+
+  <!-- Left lens -->
+  <rect
+    x="260"
+    y="270"
+    width="250"
+    height="200"
+    rx="90"
+    ry="90"
+    fill="black"
+  />
+
+  <!-- Right lens -->
+  <rect
+    x="690"
+    y="270"
+    width="250"
+    height="200"
+    rx="90"
+    ry="90"
+    fill="black"
+  />
+
+  <!-- Nose bridge cut -->
+  <rect
+    x="550"
+    y="300"
+    width="100"
+    height="160"
+    rx="40"
+    ry="40"
+    fill="black"
+  />
+</svg>

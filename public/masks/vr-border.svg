@@ -1,0 +1,41 @@
+<svg
+  viewBox="0 0 1200 700"
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="xMidYMid meet"
+>
+  <rect
+    x="180"
+    y="230"
+    width="840"
+    height="280"
+    rx="140"
+    ry="140"
+    fill="none"
+    stroke="#8b5cf6"
+    stroke-width="6"
+  />
+
+  <rect
+    x="260"
+    y="270"
+    width="250"
+    height="200"
+    rx="90"
+    ry="90"
+    fill="none"
+    stroke="#8b5cf6"
+    stroke-width="6"
+  />
+
+  <rect
+    x="690"
+    y="270"
+    width="250"
+    height="200"
+    rx="90"
+    ry="90"
+    fill="none"
+    stroke="#8b5cf6"
+    stroke-width="6"
+  />
+</svg>
